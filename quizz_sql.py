@@ -96,13 +96,12 @@ def add_links():
     open()
     cursor.execute('''PRAGMA foreign_keys=on''')
     query = "INSERT INTO quiz_content (quiz_id, question_id) VALUES (?,?)"
-    answer = input("Додати зв'язок (y / n)?")
-    while answer != 'n':
-        quiz_id = int(input("id вікторини: "))
-        question_id = int(input("id питання: "))
+    links = [[1,1],[1,2],[1,3],[2,1],[2,2]]
+    for i in links:
+        cursor.execute(query,[i,[0],i[1]])
         cursor.execute(query, [quiz_id, question_id])
         conn.commit()
-        answer = input("Додати зв'язок (y / n)?")
+        
     close()
  
  
@@ -171,16 +170,16 @@ def check_ans(quest_id, answer):
     
  
 def main():
-    #clear_db()
-    #create()
-    #add_questions()
-    #add_quiz()
+    clear_db()
+    create()
+    add_questions()
+    add_quiz()
     show_tables()
     add_links()
     show_tables()
-    # print(get_question_after(0, 3))
-    # print(get_quiz_count())
-    # print(get_random_quiz_id())
+    print(get_question_after(0, 3))
+    print(get_quiz_count())
+    print(get_random_quiz_id())
     pass
     
 if __name__ == "__main__":

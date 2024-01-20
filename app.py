@@ -25,7 +25,7 @@ def test():
         session["question_id"]  = quest_id
         session['total'] += 1
 
-        if check_answer(quest_id, answer):
+        if check_ans(quest_id, answer):
             session['answer'] += 1
     
     question = get_question_after(session["question_id"], session["quiz_id"])
@@ -53,6 +53,6 @@ app.add_url_rule("/index", "index", index, methods=["POST", "GET"])
 app.add_url_rule("/test", "test", test, methods=["POST", "GET"])
 app.add_url_rule("/result", "result", result)
 
-app.run()
+app.run(debug=True)
 
 
