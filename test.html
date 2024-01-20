@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form method="post" action="/test">
+        <h2>Test</h2>
+        <h3>{{ question }}</h3>
+        <input value="{{quest_id}}" name="q_id" type="hidden" />
+        {% for ans in answers %}
+            <p><input type="radio" value="{{ans}}"" name="quiz"> {{ans}}</p>
+        {% endfor %}
+        <button type="submit">Відповісти</button>
+        
+    </form>
+</body>
+</html>
