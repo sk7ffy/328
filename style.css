@@ -1,36 +1,52 @@
-h2 {
-    font-family:'Helvetica ',sans-serif ;
-    color:#FFAD84
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    color:;
+}
+body {
     
+    color: #D6AB70;
     
 
+}
+h1 {
+    padding: 25px;
+    color: #000;
     
+
 }
 
-body {background-color:maroon;
-background-image:url(https://media.istockphoto.com/id/1268759368/photo/close-up-of-a-black-slate-texture-background-stone-grunge-texture.webp?b=1&s=612x612&w=0&k=20&c=LfMAojas-XL8kBuLO-1av_2ITfr8am-Lmwgrla-yFRc=) ;
-height: 100vh ;
-display: flex;
-align-items:center ;
-justify-content: center;
+header {
+    height: 85px;
+    background-color:#FEE9CC;
+    font-size: 50px;
+    font-style: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-
-button {
-    background: rgb(34,193,195);
-    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    
-     
-    border-radius: 9px;
-    padding: 14px 30px;
-    transition-duration: 0.3s;
-    
-    
-}
-button:hover{
-    background-color: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgb(0, 0, 0) 100%);
-    color:#FFF78A;
-         
+.articles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+.article {
+    max-width: 300px;   
+    border-radius: 20px;
+    overflow: hidden;
+    background: #3e3e3e20;
+    text-decoration: dashed;
+    color: #000;
+}
+.content {
+    padding: 10px;
+}
+img {
+    width: 100%;
+}

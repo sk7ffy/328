@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>The best news</header>
+    <main>
+        <section>
+            <h1>Sport</h1>
+            <div class="articles">
+                {% for new in news %}
+                <a class="article" href="/home/{{new['id']}}">
+                    <img src="https://content.twinkl.co.uk/website/uploaded/football-6-1674483025.jpg" alt="">
+                    <div class="content">
+                        <h2>{{new['title']}}</h2>
+                        <p>{{new['content']}}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+            <h1>Polytics</h1>
+            <div class="articles">
+                {% for new in news %}
+                <a class="article" href="/home/{{new['id']}}">
+                    
+                    <img src="media/cropped-view-businesswomen-reading-document.jpg" alt="">
+                    <div class="content">
+                        <h2>{{new['title']}}</h2>
+                        <p>{{new['content']}}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
